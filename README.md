@@ -7,13 +7,13 @@ The library will do all the timer setup and channel selection work behind the sc
 ## Default Value Range
 Call the `analogWrite` function like in standard arduino framework:
 ```cpp
-analogWrite(LED_BUILTIN, 255); // value range 0-255
+analogWrite(LED_BUILTIN, 255); // value range 0-255 so 255 = 100%
 ```
 
 ## Custom Value Range
 You can also set the maximum value as third parameter:
 ```cpp
-analogWrite(LED_BUILTIN, 255, 1023); // value range 0-1023
+analogWrite(LED_BUILTIN, 255, 1023); // value range 0-1023 so 255 = 25%
 ```
 
 ## Timer Resolution
@@ -30,4 +30,4 @@ analogWriteResolution(10000); // set frequency to 10 KHz for all pins
 analogWriteResolution(LED_BUILTIN, 10000); // set frequency to 10 KHz for LED pin
 ```
 
-Please note that timer resolution and PWM frequency should be calculated to expected results, read more about [Supported Range of Frequency and Duty Resolution](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html#ledc-api-supported-range-frequency-duty-resolution) in the official documentation website.
+Please note that both timer resolution and PWM frequency should be calculated to get the expected results, if frequency is not set correctly, the output PWM signal wont be as expected, read more about [Supported Range of Frequency and Duty Resolution](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html#ledc-api-supported-range-frequency-duty-resolution) in the official Espressif documentation website.
