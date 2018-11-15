@@ -26,8 +26,8 @@ analogWriteResolution(LED_BUILTIN, 10); // set resolution to 10 bits for LED pin
 ## PWM Frequency
 The default PWM frequency is set to 5000 Hz in all the 16 channels, if you want to change that, use the `analogWriteFrequency` function:
 ```cpp
-analogWriteResolution(10000); // set frequency to 10 KHz for all pins
-analogWriteResolution(LED_BUILTIN, 10000); // set frequency to 10 KHz for LED pin
+analogWriteFrequency(10000); // set frequency to 10 KHz for all pins
+analogWriteFrequency(LED_BUILTIN, 10000); // set frequency to 10 KHz for LED pin
 ```
 
 Please note that both timer resolution and PWM frequency should be calculated to get the expected results, if frequency is not set correctly, the output PWM signal wont be as expected, read more about [Supported Range of Frequency and Duty Resolution](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/ledc.html#ledc-api-supported-range-frequency-duty-resolution) in the official Espressif documentation website.
