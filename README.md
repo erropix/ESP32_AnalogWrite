@@ -6,6 +6,29 @@ Licensed under the MIT license.
 # Usage
 The library will do all the timer setup and channel selection work behind the scene so you don't have to worry about that.
 
+## Fade Example
+```cpp
+#include <Arduino.h>
+#include <analogWrite.h>
+
+int step = 1;
+int brightness = 0;
+
+void setup() {
+}
+
+void loop() {
+  brightness += brightStep;
+  analogWrite(LED_BUILTIN, brightness);
+
+  if ( brightness == 0 || brightness == 255 ) {
+    brightStep = -brightStep;
+  }
+  
+  delay(10);
+}
+```
+
 ## Default Value Range
 Call the `analogWrite` function like in standard arduino framework:
 ```cpp
