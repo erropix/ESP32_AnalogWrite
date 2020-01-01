@@ -18,6 +18,6 @@ void analogWriteFrequency(uint8_t pin, double frequency);
 void analogWriteResolution(uint8_t resolution);
 void analogWriteResolution(uint8_t pin, uint8_t resolution);
 
-void analogWrite(uint8_t pin, uint32_t value, uint32_t valueMax = 255);
+void analogWrite(uint8_t pin, uint32_t value, uint32_t valueMax = 256);
 
 #endif
