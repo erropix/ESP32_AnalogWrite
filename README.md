@@ -32,13 +32,13 @@ void loop() {
 ## Default Value Range
 Call the `analogWrite` function like in standard arduino framework:
 ```cpp
-analogWrite(LED_BUILTIN, 255); // value range 0-255 so 255 = 100%
+analogWrite(LED_BUILTIN, 256); // value range 0-256 so 256 = 100%
 ```
 
 ## Custom Value Range
 You can also set the maximum value as third parameter:
 ```cpp
-analogWrite(LED_BUILTIN, 255, 1023); // value range 0-1023 so 255 = 25%
+analogWrite(LED_BUILTIN, 256, 1024); // value range 0-1024 so 256 = 25%
 ```
 
 ## Timer Resolution
