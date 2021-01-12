@@ -11,17 +11,21 @@ The library will do all the timer setup and channel selection work behind the sc
 #include <Arduino.h>
 #include <analogWrite.h>
 
-int step = 1;
+int pin = LED_BUILTIN;
 int brightness = 0;
+int brightStep = 1;
 
-void setup() {
+void setup()
+{
 }
 
-void loop() {
+void loop()
+{
   brightness += brightStep;
-  analogWrite(LED_BUILTIN, brightness);
+  analogWrite(pin, brightness);
 
-  if ( brightness == 0 || brightness == 255 ) {
+  if (brightness == 0 || brightness == 255)
+  {
     brightStep = -brightStep;
   }
   
