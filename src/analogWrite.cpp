@@ -91,8 +91,16 @@ void analogWriteResolution(uint8_t pin, uint8_t resolution)
 
 void analogWrite(uint8_t pin, uint32_t value, uint32_t valueMax)
 {
-  int channel = analogWriteChannel(pin);
 
+  int channel = analogWriteChannel(pin);
+  /*
+  Serial.println();
+  Serial.print("pin: ");
+  Serial.print(pin);
+  Serial.print("chn: ");
+  Serial.print(channel);
+  Serial.println();
+  */
   // Make sure the pin was attached to a channel, if not do nothing
   if (channel != -1 && channel < 16)
   {
