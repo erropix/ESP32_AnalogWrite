@@ -1,4 +1,8 @@
+I'm looking for active maintainers for this project as I no longer have the time to support it. Please get in touch if you're interested
+---
+
 # About
+
 This library provides an analogWrite function polyfill for ESP32 Arduino framework by wrapping the [ledc](https://github.com/espressif/arduino-esp32/blob/master/cores/esp32/esp32-hal-ledc.c) library.
 
 Licensed under the MIT license.
