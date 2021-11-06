@@ -98,7 +98,7 @@ void analogWrite(uint8_t pin, uint32_t value, uint32_t valueMax)
   {
     uint8_t resolution = _analog_write_channels[channel].resolution;
     uint32_t levels = pow(2, resolution);
-    uint32_t duty = ((levels - 1) / valueMax) * min(value, valueMax);
+    uint32_t duty = levels / valueMax * min(value, valueMax);
 
     // write duty to LEDC
     ledcWrite(channel, duty);
