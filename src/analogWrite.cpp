@@ -41,8 +41,10 @@ int analogWriteChannel(uint8_t pin)
       {
         _analog_write_channels[i].pin = pin;
         channel = i;
-        ledcSetup(channel, _analog_write_channels[i].frequency, _analog_write_channels[i].resolution);
-        ledcAttachPin(pin, channel);
+        // ledcSetup and ledcAttachedPin are removed from Arduino 3.0 and newer - instead, letdcAttach is being used.
+        // ledcSetup(channel, _analog_write_channels[i].frequency, _analog_write_channels[i].resolution);
+        // ledcAttachPin(pin, channel);
+        ledcAttach(pin, _analog_write_channels[i].frequency, _analog_write_channels[i].resolution);
         break;
       }
     }
